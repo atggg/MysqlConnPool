@@ -1,14 +1,7 @@
 #include"MysqlConnPool.h"
-class A
-{
-
-};
 int main()
 {
 	
-	std::pair<int, std::string> d(1, "h");
-	d.first;
-
 	ConnPool<MysqlConn>* Pool = new MysqlConnPool(4, 8, "127.0.0.1", "root", "", "test1");
 	Pool->start();
 	std::shared_ptr<MysqlConn> Conn =  Pool->getConn();
